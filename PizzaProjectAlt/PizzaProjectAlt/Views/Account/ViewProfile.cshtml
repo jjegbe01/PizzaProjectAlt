@@ -5,7 +5,16 @@
 }
 
 <h2>ViewProfile</h2>
-
-<img src="@ViewBag.ProfilePicture" alt="@ViewBag.FirstName" style="height:100px;" /> <br/>
-@ViewBag.FirstName <br/>
-@ViewBag.LastName <br/>
+@if (Request.IsAuthenticated)
+{
+    <img src="@ViewBag.ProfilePicture" alt="@ViewBag.FirstName" style="height:100px;" /> <br />
+    @ViewBag.FirstName <br />
+    @ViewBag.LastName <br />
+    @ViewBag.Location <br />
+    @ViewBag.FavoritePizzaria <br />
+    @ViewBag.PizzaEatingStyle <br />
+}
+else if (!Request.IsAuthenticated)
+{
+    <p>You are not logged in.</p>
+}
