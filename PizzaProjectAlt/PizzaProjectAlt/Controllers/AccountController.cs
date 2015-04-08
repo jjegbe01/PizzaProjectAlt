@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using PizzaProjectAlt.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Web.Security;
 
 namespace PizzaProjectAlt.Controllers
 {
@@ -204,7 +205,8 @@ namespace PizzaProjectAlt.Controllers
         [AllowAnonymous]
         public ActionResult ListAllUsers()
         {
-            return View();
+            var users = Membership.GetAllUsers();
+            return View(users);
         }
         //
         // GET: /Account/ForgotPassword
