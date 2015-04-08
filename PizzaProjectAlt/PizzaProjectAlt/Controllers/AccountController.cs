@@ -192,6 +192,11 @@ namespace PizzaProjectAlt.Controllers
             var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
             var currentUser = manager.FindById(User.Identity.GetUserId());
             ViewBag.FirstName = currentUser.FirstName;
+            ViewBag.LastName = currentUser.LastName;
+            ViewBag.ProfilePicture = currentUser.ProfilePicture;
+            ViewBag.Location = currentUser.Location;
+            ViewBag.FavoritePizzaria = currentUser.FavoritePizzaria;
+            ViewBag.PizzaEatingStyle = currentUser.PizzaEatingStyle;
     
             return View();
         }
