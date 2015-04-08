@@ -205,8 +205,7 @@ namespace PizzaProjectAlt.Controllers
         [AllowAnonymous]
         public ActionResult ListAllUsers()
         {
-            var users = Membership.GetAllUsers();
-            return View(users);
+            return View();
         }
         //
         // GET: /Account/ForgotPassword
