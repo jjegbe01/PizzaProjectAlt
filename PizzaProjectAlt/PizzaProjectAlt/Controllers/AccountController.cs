@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Globalization;
 using System.Linq;
 using System.Security.Claims;
@@ -11,12 +14,14 @@ using Microsoft.Owin.Security;
 using PizzaProjectAlt.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Web.Security;
+using System.Net;
 
 namespace PizzaProjectAlt.Controllers
 {
     [Authorize]
     public class AccountController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
@@ -202,7 +207,34 @@ namespace PizzaProjectAlt.Controllers
             return View();
         }
 
-        
+       public ActionResult Edit(int? id)
+        {
+            var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
+            var currentUser = manager.FindById(User.Identity.GetUserId());
+
+            id = Convert.ToInt32(currentUser.Id);
+
+           if (id == null)
+           {
+               return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+           }
+
+           return View(id);
+           
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit ([Bind(Include="FirstName,LastName,ProfilePicture,Location,FavoritePizza,PizzaEatingStyle")] ApplicationUser user)
+       {
+            if (ModelState.IsValid)
+            {
+                db.Entry(user).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(user);
+       }
         //
         // GET: /Account/ForgotPassword
         [AllowAnonymous]
