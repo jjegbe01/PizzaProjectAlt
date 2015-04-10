@@ -202,11 +202,7 @@ namespace PizzaProjectAlt.Controllers
             return View();
         }
 
-        [AllowAnonymous]
-        public ActionResult ListAllUsers()
-        {
-            return View();
-        }
+        
         //
         // GET: /Account/ForgotPassword
         [AllowAnonymous]
