@@ -207,34 +207,49 @@ namespace PizzaProjectAlt.Controllers
             return View();
         }
 
-       public ActionResult Edit(int? id)
+       public ActionResult Edit()
         {
-            var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
-            var currentUser = manager.FindById(User.Identity.GetUserId());
+            string username = User.Identity.Name;
 
-            id = Convert.ToInt32(currentUser.Id);
+            ApplicationUser user = db.Users.FirstOrDefault(u => u.UserName.Equals(username));
+            UserEditViewModel model = new UserEditViewModel();
+            model.FirstName = user.FirstName;
+            model.LastName = user.LastName;
+            model.ProfilePicture = user.ProfilePicture;
+            model.Location = user.Location;
+            model.FavoritePizzaria = user.FavoritePizzaria;
+            model.PizzaEatingStyle = user.PizzaEatingStyle;
 
-           if (id == null)
-           {
-               return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-           }
-
-           return View(id);
-           
+            return View(model);
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit ([Bind(Include="FirstName,LastName,ProfilePicture,Location,FavoritePizza,PizzaEatingStyle")] ApplicationUser user)
+        public ActionResult Edit(UserEditViewModel userprofile)
        {
             if (ModelState.IsValid)
             {
+                string username = User.Identity.Name;
+
+                ApplicationUser user = db.Users.FirstOrDefault(u => u.UserName.Equals(username));
+
+                user.FirstName = userprofile.FirstName;
+                user.LastName = userprofile.LastName;
+                user.ProfilePicture = userprofile.ProfilePicture;
+                user.Location = userprofile.Location;
+                user.FavoritePizzaria = userprofile.FavoritePizzaria;
+                user.PizzaEatingStyle = userprofile.PizzaEatingStyle;
+
                 db.Entry(user).State = EntityState.Modified;
+
                 db.SaveChanges();
-                return RedirectToAction("Index");
+
+                return RedirectToAction("ViewProfile");
             }
-            return View(user);
+
+            return View(userprofile);
        }
+
+        
         //
         // GET: /Account/ForgotPassword
         [AllowAnonymous]
