@@ -8,6 +8,8 @@ namespace PizzaProjectAlt.Models
 {
     public class Pizza
     {
+        public int pizzaID { get; set; }
+        public string pizzaName { get; set; }
         public string doughType { get; set; }
         public string sauceType { get; set; }
         public string cheeseType { get; set; }
@@ -18,7 +20,7 @@ namespace PizzaProjectAlt.Models
         public string toppingFive { get; set; }
     }
 
-    public class PizzaDBContext : DbContext
+    public class DefaultConnection : DbContext
     {
         public DbSet<Pizza> Pizzas { get; set; }
     }
