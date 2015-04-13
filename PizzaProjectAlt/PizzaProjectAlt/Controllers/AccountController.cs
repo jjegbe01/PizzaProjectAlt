@@ -226,7 +226,6 @@ namespace PizzaProjectAlt.Controllers
         [HttpPost]
         public ActionResult Edit(UserEditViewModel userprofile)
        {
-           
                 string email = User.Identity.Name;
 
                 ApplicationUser user = db.Users.FirstOrDefault(u => u.Email.Equals(email));
@@ -243,9 +242,6 @@ namespace PizzaProjectAlt.Controllers
                 db.SaveChanges();
 
                 return RedirectToAction("ViewProfile");
-            
-
-            return View(userprofile);
        }
 
         
