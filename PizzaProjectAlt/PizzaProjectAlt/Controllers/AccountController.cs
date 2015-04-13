@@ -226,11 +226,10 @@ namespace PizzaProjectAlt.Controllers
         [HttpPost]
         public ActionResult Edit(UserEditViewModel userprofile)
        {
-            if (ModelState.IsValid)
-            {
-                string username = User.Identity.Name;
+           
+                string email = User.Identity.Name;
 
-                ApplicationUser user = db.Users.FirstOrDefault(u => u.UserName.Equals(username));
+                ApplicationUser user = db.Users.FirstOrDefault(u => u.Email.Equals(email));
 
                 user.FirstName = userprofile.FirstName;
                 user.LastName = userprofile.LastName;
@@ -244,7 +243,7 @@ namespace PizzaProjectAlt.Controllers
                 db.SaveChanges();
 
                 return RedirectToAction("ViewProfile");
-            }
+            
 
             return View(userprofile);
        }
