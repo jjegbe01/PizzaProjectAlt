@@ -244,6 +244,11 @@ namespace PizzaProjectAlt.Controllers
                 return RedirectToAction("ViewProfile");
        }
 
+        [AllowAnonymous]
+        public ActionResult GetUsers()
+        {
+            return View(db.Users.ToList());
+        }
         
         //
         // GET: /Account/ForgotPassword

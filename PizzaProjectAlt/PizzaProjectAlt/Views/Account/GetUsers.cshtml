@@ -1,0 +1,55 @@
+﻿@model IEnumerable<PizzaProjectAlt.Models.ApplicationUser>
+@{
+    ViewBag.Title = "Our Community";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetUsers</h2>
+
+<table class="table">
+<tr>
+    <th>
+        @Html.DisplayNameFor(model => model.ProfilePicture)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.FirstName)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.LastName)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.Location)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.FavoritePizzaria)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.PizzaEatingStyle)
+    </th>
+</tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <img src="@Html.DisplayFor(modelItem => item.ProfilePicture)" alt="Users Picture" style="height:50px" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FavoritePizzaria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PizzaEatingStyle)
+            </td>
+        </tr>
+    }
+
+</table>
