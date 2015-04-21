@@ -8,7 +8,6 @@ namespace PizzaProjectAlt.Models
 {
     public class Pizza
     {
-        public string userID { get; set; }
         public int pizzaID { get; set; }
         public string pizzaName { get; set; }
         public string doughType { get; set; }

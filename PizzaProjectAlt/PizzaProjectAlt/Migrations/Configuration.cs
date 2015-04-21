@@ -4,34 +4,16 @@ namespace PizzaProjectAlt.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
-    using PizzaProjectAlt.Models;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<PizzaProjectAlt.Models.DefaultConnection>
+    internal sealed class Configuration : DbMigrationsConfiguration<PizzaProjectAlt.Models.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(PizzaProjectAlt.Models.DefaultConnection context)
+        protected override void Seed(PizzaProjectAlt.Models.ApplicationDbContext context)
         {
-            context.Pizzas.AddOrUpdate(i => i.pizzaName,
-                new Pizza
-                {
-                    userID = "testUser1@example.com",
-                    pizzaName = "The Classic",
-                    doughType = "Plain",
-                    sauceType = "Tomato",
-                    cheeseType = "Mozzarella",
-                    toppingOne = "Pepperoni",
-                    toppingTwo = "Pepperoni",
-                    toppingThree = "Pepperoni",
-                    toppingFour = "Pepperoni",
-                    toppingFive = "Pepperoni"
-                }
-                );
-            
-
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
