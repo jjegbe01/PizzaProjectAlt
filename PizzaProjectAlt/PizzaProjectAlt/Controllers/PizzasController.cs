@@ -46,7 +46,7 @@ namespace PizzaProjectAlt.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "userID,pizzaID,pizzaName,doughType,sauceType,cheeseType,toppingOne,toppingTwo,toppingThree,toppingFour,toppingFive")] Pizza pizza)
+        public ActionResult Create([Bind(Include = "pizzaID,pizzaName,doughType,sauceType,cheeseType,toppingOne,toppingTwo,toppingThree,toppingFour,toppingFive")] Pizza pizza)
         {
             if (ModelState.IsValid)
             {
