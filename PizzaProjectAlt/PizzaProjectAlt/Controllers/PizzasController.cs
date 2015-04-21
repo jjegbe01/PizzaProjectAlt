@@ -50,6 +50,7 @@ namespace PizzaProjectAlt.Controllers
         {
             if (ModelState.IsValid)
             {
+                pizza.userID = User.Identity.Name;
                 db.Pizzas.Add(pizza);
                 db.SaveChanges();
                 return RedirectToAction("Index");
