@@ -161,6 +161,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PizzaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -183,6 +184,10 @@
     <Content Include="Content\Images\pizza 1.jpg" />
     <Content Include="Content\Images\pizza 2.jpg" />
     <Content Include="Content\Images\pizza 3.png" />
+    <Content Include="Content\Images\rsz_1deepdishpizza.jpg" />
+    <Content Include="Content\Images\rsz_2deepdishpizza.jpg" />
+    <Content Include="Content\Images\rsz_deepdishpizza.jpg" />
+    <Content Include="Content\twitterbot.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -239,6 +244,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\_Carousel.cshtml" />
     <Content Include="Views\Home\_Footer.cshtml" />
+    <Content Include="Views\Pizza\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

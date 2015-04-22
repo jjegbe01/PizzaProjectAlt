@@ -26,7 +26,8 @@ namespace PizzaProjectAlt
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/carousel.css"));
+                      "~/Content/carousel.css",
+                      "~/Content/twitterbot.css"));
 
             bundles.Add(new StyleBundle("~/bundles/homecss")
             .Include("~/Content/home.css")
