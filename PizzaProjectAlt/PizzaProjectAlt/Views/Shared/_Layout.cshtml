@@ -7,8 +7,6 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
-    @RenderSection("pagecss", false)
-
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -31,7 +29,6 @@
                     <!--<li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>-->
-                    <li>@Html.ActionLink("Our Community", "GetUsers", "Account")</li>
                     @if (Request.IsAuthenticated)
                     {
                         <li>@Html.ActionLink("View Profile","ViewProfile","Account")</li>
@@ -45,13 +42,9 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-<<<<<<< HEAD
         <footer>
             <p>&copy; @DateTime.Now.Year - Pie Space</p>
         </footer>
-=======
-        @Html.Action("Footer", "Home")
->>>>>>> 0aec581c558ec60584eaa5439bf7abeacde98f5d
     </div>
 
     @Scripts.Render("~/bundles/jquery")
