@@ -26,5 +26,10 @@ namespace PizzaProjectAlt.Controllers
 
             return View();
         }
+
+        public ActionResult Footer()
+        {
+            return PartialView("_Footer");
+        }
     }
 }
