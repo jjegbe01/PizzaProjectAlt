@@ -180,6 +180,16 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\carousel.css" />
+    <Content Include="Content\home.css" />
+    <Content Include="Content\Images\pizza 1.jpg" />
+    <Content Include="Content\Images\pizza 2.jpg" />
+    <Content Include="Content\Images\pizza 3.png" />
+    <Content Include="Content\Images\rsz_1deepdishpizza.jpg" />
+    <Content Include="Content\Images\rsz_2deepdishpizza.jpg" />
+    <Content Include="Content\Images\rsz_deepdishpizza.jpg" />
+    <Content Include="Content\Images\space.jpg" />
+    <Content Include="Content\twitterbot.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -242,6 +252,7 @@
     <Content Include="Views\Pizzas\Edit.cshtml" />
     <Content Include="Views\Pizzas\Index.cshtml" />
     <Content Include="Views\Account\GetUsers.cshtml" />
+    <Content Include="Views\Home\_Carousel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

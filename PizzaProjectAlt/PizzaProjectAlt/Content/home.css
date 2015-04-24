@@ -1,0 +1,63 @@
+﻿body {
+    background: url("https://www.pizzahut.com/assets/w/images/black/background.jpg") no-repeat scroll 50% 0 #252523;
+    color: #fff;
+}
+
+
+.navbar-brand {
+    font-size:35px;
+    color: #fff!important;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+color: #FF0000;  /*Sets the text hover color on navbar*/
+font-weight: bold;
+font-size: 22px;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active >   
+ a:hover, .navbar-default .navbar-nav > .active > a:focus {
+color: white;
+}
+
+.navbar-inverse {
+    color: #fff;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+color: #fff;
+text-decoration: none;
+background-color: #fff;  /*change color of links in drop down here*/
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+text-decoration: none;
+background-color: #fff; /*Change rollover cell color here*/
+}
+
+
+.navbar-inverse .navbar-nav > li > a {
+color: white; /*Change active text color here*/
+}
+
+
+#pizza-navbar {
+    opacity: 0.4;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;       
+}
+
+
+#pizza-footer {
+    opacity: 0.4;
+}
+
+
+
+
+
+#specialty {
+    padding-top: 40px;
+}
