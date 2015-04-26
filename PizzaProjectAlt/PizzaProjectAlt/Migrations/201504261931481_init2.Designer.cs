@@ -7,13 +7,13 @@ namespace PizzaProjectAlt.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.1-30610")]
-    public sealed partial class FnLnPpLcFpPs : IMigrationMetadata
+    public sealed partial class init2 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(FnLnPpLcFpPs));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(init2));
         
         string IMigrationMetadata.Id
         {
-            get { return "201504081501063_FnLnPpLcFpPs"; }
+            get { return "201504261931481_init2"; }
         }
         
         string IMigrationMetadata.Source

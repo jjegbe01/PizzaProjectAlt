@@ -9,15 +9,22 @@ namespace PizzaProjectAlt.Models
     public class Pizza
     {
         public int pizzaID { get; set; }
+        public string userID { get; set; }
         public string pizzaName { get; set; }
-        public string doughType { get; set; }
-        public string sauceType { get; set; }
-        public string cheeseType { get; set; }
-        public string toppingOne { get; set; }
-        public string toppingTwo { get; set; }
-        public string toppingThree { get; set; }
-        public string toppingFour { get; set; }
-        public string toppingFive { get; set; }
+        public bool bacon { get; set; }
+        public bool bpeppers { get; set; }
+        public bool blackOlives { get; set; }
+        public bool cheese { get; set; }
+        public bool chicken { get; set; }
+        public bool dough { get; set; }
+        public bool gpeppers { get; set; }
+        public bool ham { get; set; }
+        public bool pepperoni { get; set; }
+        public bool pineapple { get; set; }
+        public bool sauce { get; set; }
+        public bool sausage { get; set; }
+        public bool spinnach { get; set; }
+
     }
 
     public class DefaultConnection : DbContext

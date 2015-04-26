@@ -5,14 +5,14 @@ namespace PizzaProjectAlt.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<PizzaProjectAlt.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<PizzaProjectAlt.Models.DefaultConnection>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(PizzaProjectAlt.Models.ApplicationDbContext context)
+        protected override void Seed(PizzaProjectAlt.Models.DefaultConnection context)
         {
             //  This method will be called after migrating to the latest version.
 

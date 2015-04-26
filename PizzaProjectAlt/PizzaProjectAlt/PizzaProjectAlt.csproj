@@ -161,13 +161,12 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\PizzasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201504081501063_FnLnPpLcFpPs.cs" />
-    <Compile Include="Migrations\201504081501063_FnLnPpLcFpPs.Designer.cs">
-      <DependentUpon>201504081501063_FnLnPpLcFpPs.cs</DependentUpon>
+    <Compile Include="Migrations\201504261931481_init2.cs" />
+    <Compile Include="Migrations\201504261931481_init2.Designer.cs">
+      <DependentUpon>201504261931481_init2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -259,11 +258,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Account\ViewProfile.cshtml" />
     <Content Include="Views\Account\Edit.cshtml" />
-    <Content Include="Views\Pizzas\Create.cshtml" />
-    <Content Include="Views\Pizzas\Delete.cshtml" />
-    <Content Include="Views\Pizzas\Details.cshtml" />
-    <Content Include="Views\Pizzas\Edit.cshtml" />
-    <Content Include="Views\Pizzas\Index.cshtml" />
     <Content Include="Views\Account\GetUsers.cshtml" />
     <Content Include="Views\Home\_Carousel.cshtml" />
     <Content Include="Views\Home\PizzaBuilder.cshtml" />
@@ -279,8 +273,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201504081501063_FnLnPpLcFpPs.resx">
-      <DependentUpon>201504081501063_FnLnPpLcFpPs.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201504261931481_init2.resx">
+      <DependentUpon>201504261931481_init2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
