@@ -161,6 +161,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PizzasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -261,6 +262,11 @@
     <Content Include="Views\Account\GetUsers.cshtml" />
     <Content Include="Views\Home\_Carousel.cshtml" />
     <Content Include="Views\Home\PizzaBuilder.cshtml" />
+    <Content Include="Views\Pizzas\Create.cshtml" />
+    <Content Include="Views\Pizzas\Delete.cshtml" />
+    <Content Include="Views\Pizzas\Details.cshtml" />
+    <Content Include="Views\Pizzas\Edit.cshtml" />
+    <Content Include="Views\Pizzas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
