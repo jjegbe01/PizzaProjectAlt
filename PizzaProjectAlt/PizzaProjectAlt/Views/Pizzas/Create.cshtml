@@ -10,169 +10,303 @@
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Pizza</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.userID, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.userID, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.userID, "", new { @class = "text-danger" })
-            </div>
-        </div>
+    <div class="row">
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.pizzaName, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.pizzaName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.pizzaName, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        <!--Pizza Builder Code-->
+            <div class="col-md-5" style="float:right">
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.bacon, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.bacon)
-                    @Html.ValidationMessageFor(model => model.bacon, "", new { @class = "text-danger" })
+                <div style="margin:20px;">
+                    <div id="main" style="position:relative;overflow:hidden;width:550px;height:550px;">
+                        <img src="~/Content/Images/Toppings/dough.png" style="position:absolute;top:0px;left:0px;z-index:0; height:550px; width:550px;">
+                        <img src="~/Content/Images/Toppings/sauce.png" style="position:absolute;top:0px;left:0px;z-index:0;">
+                        <img src="~/Content/Images/Toppings/cheese.png" style="position:absolute;top:0px;left:0px;z-index:0;">
+
+                        <img id="pepperoniImage" src="~/Content/Images/Toppings/pepperoni.png" style="position:absolute;top:0px;left:0px;z-index:1;visibility:hidden;">
+                        <img id="sausageImage" src="~/Content/Images/Toppings/sausage.png" style="position:absolute;top:0px;left:0px;z-index:1;visibility:hidden;">
+                        <img id="hamImage" src="~/Content/Images/Toppings/ham.png" style="position:absolute;top:0px;left:0px;z-index:1;visibility:hidden;">
+                        <img id="baconImage" src="~/Content/Images/Toppings/bacon.png" style="position:absolute;top:0px;left:0px;z-index:1;visibility:hidden;">
+                        <img id="chickenImage" src="~/Content/Images/Toppings/chicken.png" style="position:absolute;top:0px;left:0px;z-index:1;visibility:hidden;">
+
+                        <img id="greenpeppersImage" src="~/Content/Images/Toppings/green-peppers.png" style="position:absolute;top:0px;left:0px;z-index:2;visibility:hidden;">
+                        <img id="bannanapeppersImage" src="~/Content/Images/Toppings/bannana-peppers.png" style="position:absolute;top:0px;left:0px;z-index:2;visibility:hidden;">
+                        <img id="spinachImage" src="~/Content/Images/Toppings/spinnach.png" style="position:absolute;top:0px;left:0px;z-index:2;visibility:hidden;">
+                        <img id="blackolivesImage" src="~/Content/Images/Toppings/black-olives.png" style="position:absolute;top:0px;left:0px;z-index:2;visibility:hidden;">
+                        <img id="pineappleImage" src="~/Content/Images/Toppings/pineapple.png" style="position:absolute;top:0px;left:0px;z-index:2;visibility:hidden;">
+
+
+                    </div>
                 </div>
             </div>
-        </div>
+            <!--Pizza Builder Code-->
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.bpeppers, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.bpeppers)
-                    @Html.ValidationMessageFor(model => model.bpeppers, "", new { @class = "text-danger" })
+        <div class="col-md-5" style="float:left">
+
+            <div class="form-horizontal">
+                <h4>Pizza</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.userID, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.userID, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.userID, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.blackOlives, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.blackOlives)
-                    @Html.ValidationMessageFor(model => model.blackOlives, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.pizzaName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.pizzaName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.pizzaName, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.cheese, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.cheese)
-                    @Html.ValidationMessageFor(model => model.cheese, "", new { @class = "text-danger" })
+                
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.bacon, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.CheckBoxFor(model => model.bacon, new { ID = "baconBox", onchange = "toggleBacon()" })
+                            @Html.ValidationMessageFor(model => model.bacon, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.chicken, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.chicken)
-                    @Html.ValidationMessageFor(model => model.chicken, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.bpeppers, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.CheckBoxFor(model => model.bpeppers, new { ID = "bpeppersBox", onchange = "togglebPeppers()" })
+                            @Html.ValidationMessageFor(model => model.bpeppers, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.dough, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.dough)
-                    @Html.ValidationMessageFor(model => model.dough, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.blackOlives, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.CheckBoxFor(model => model.blackOlives, new { ID = "blackOliveBox", onchange = "toggleblackOlives()" })
+                            @Html.ValidationMessageFor(model => model.blackOlives, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.gpeppers, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.gpeppers)
-                    @Html.ValidationMessageFor(model => model.gpeppers, "", new { @class = "text-danger" })
+                @*<div class="form-group">
+                    @Html.LabelFor(model => model.cheese, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.CheckBoxFor(model => model.cheese, new { ID = "cheeseBox" })
+                            @Html.ValidationMessageFor(model => model.cheese, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>*@
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.chicken, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.CheckBoxFor(model => model.chicken, new { ID = "chickenBox", onchange = "toggleChicken()" })
+                            @Html.ValidationMessageFor(model => model.chicken, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.ham, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.ham)
-                    @Html.ValidationMessageFor(model => model.ham, "", new { @class = "text-danger" })
+                @*<div class="form-group">
+                    @Html.LabelFor(model => model.dough, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.CheckBoxFor(model => model.dough, new { ID = "doughBox" })
+                            @Html.ValidationMessageFor(model => model.dough, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>*@
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.gpeppers, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.CheckBoxFor(model => model.gpeppers, new { ID = "gpeppersBox", onchange = "togglegpeppers()" })
+                            @Html.ValidationMessageFor(model => model.gpeppers, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.pepperoni, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.pepperoni)
-                    @Html.ValidationMessageFor(model => model.pepperoni, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ham, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.CheckBoxFor(model => model.ham, new { ID = "hamBox", onchange = "toggleHam()" })
+                            @Html.ValidationMessageFor(model => model.ham, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.pineapple, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.pineapple)
-                    @Html.ValidationMessageFor(model => model.pineapple, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.pepperoni, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.CheckBoxFor(model => model.pepperoni, new { ID = "pepperoniBox", onchange = "togglePepperoni()" })
+                            @Html.ValidationMessageFor(model => model.pepperoni, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.sauce, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.sauce)
-                    @Html.ValidationMessageFor(model => model.sauce, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.pineapple, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.CheckBoxFor(model => model.pineapple, new { ID = "pineappleBox", onchange = "togglePineapple()" })
+                            @Html.ValidationMessageFor(model => model.pineapple, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.sausage, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.sausage)
-                    @Html.ValidationMessageFor(model => model.sausage, "", new { @class = "text-danger" })
+                @*<div class="form-group">
+                    @Html.LabelFor(model => model.sauce, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.CheckBoxFor(model => model.sauce, new { ID = "sauceBox" })
+                            @Html.ValidationMessageFor(model => model.sauce, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>*@
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.sausage, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.CheckBoxFor(model => model.sausage, new { ID = "sausageBox", onchange = "toggleSausage()" })
+                            @Html.ValidationMessageFor(model => model.sausage, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.spinnach, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.spinnach)
-                    @Html.ValidationMessageFor(model => model.spinnach, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.spinnach, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.CheckBoxFor(model => model.spinnach, new { ID = "spinnachBox", onchange = "toggleSpinach()" })
+                            @Html.ValidationMessageFor(model => model.spinnach, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="btn btn-default" />
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-}
+        }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+        <div>
+            @Html.ActionLink("Back to List", "Index")
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+            <!--Toggle Code-->
+            <script type="text/javascript">
+                var spinnachBox = document.getElementById('spinnachBox');
+                var baconBox = document.getElementById('baconBox');
+                var bpeppersBox = document.getElementById('bpeppersBox');
+                var blackOlivesBox = document.getElementById('blackOliveBox');
+                var chickenBox = document.getElementById('chickenBox');
+                var gpeppersBox = document.getElementById('gpeppersBox');
+                var hamBox = document.getElementById('hamBox');
+                var pepperoniBox = document.getElementById('pepperoniBox');
+                var pineappleBox = document.getElementById('pineappleBox');
+                var sausageBox = document.getElementById('sausageBox');
+
+                var toggleSpinach = function () {
+                    if (spinnachBox.checked==true) {
+                        spinachImage.style.visibility = "visible";
+                    }
+                    else {
+                        spinachImage.style.visibility = "hidden";
+                    }
+                }
+
+                var toggleBacon = function () {
+                    if (baconBox.checked == true) {
+                        baconImage.style.visibility = "visible";
+                    }
+                    else {
+                        baconImage.style.visibility = "hidden";
+                    }
+                }
+
+                var togglebPeppers = function () {
+                    if (bpeppersBox.checked == true) {
+                        bannanapeppersImage.style.visibility = "visible";
+                    }
+                    else {
+                        bannanapeppersImage.style.visibility = "hidden";
+                    }
+                }
+                var toggleblackOlives = function () {
+                    if (blackOlivesBox.checked == true) {
+                        blackolivesImage.style.visibility = "visible";
+                    }
+                    else {
+                        blackolivesImage.style.visibility = "hidden";
+                    }
+                }
+                var toggleChicken = function () {
+                    if (chickenBox.checked == true) {
+                        chickenImage.style.visibility = "visible";
+                    }
+                    else {
+                        chickenImage.style.visibility = "hidden";
+                    }
+                }
+                var togglegpeppers = function () {
+                    if (gpeppersBox.checked == true) {
+                        greenpeppersImage.style.visibility = "visible";
+                    }
+                    else {
+                        greenpeppersImage.style.visibility = "hidden";
+                    }
+                }
+                var toggleHam = function () {
+                    if (hamBox.checked == true) {
+                        hamImage.style.visibility = "visible";
+                    }
+                    else {
+                        hamImage.style.visibility = "hidden";
+                    }
+                }
+                var togglePepperoni = function () {
+                    if (pepperoniBox.checked == true) {
+                        pepperoniImage.style.visibility = "visible";
+                    }
+                    else {
+                        pepperoniImage.style.visibility = "hidden";
+                    }
+                }
+                var togglePineapple = function () {
+                    if (pineappleBox.checked == true) {
+                        pineappleImage.style.visibility = "visible";
+                    }
+                    else {
+                        pineappleImage.style.visibility = "hidden";
+                    }
+                }
+                var toggleSausage = function () {
+                    if (sausageBox.checked == true) {
+                        sausageImage.style.visibility = "visible";
+                    }
+                    else {
+                        sausageImage.style.visibility = "hidden";
+                    }
+                }
+            </script>
+
+            <!--Toggle Code-->
+            
+        </div>
+
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }
