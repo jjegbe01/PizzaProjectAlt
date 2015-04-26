@@ -1,0 +1,101 @@
+﻿@{
+    ViewBag.Title = "PizzaBuilder";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>PizzaBuilder</h2>
+
+<div class="row">&nbsp;</div>
+
+<div class="row">
+    <div class="col-md-7">
+        <div style="margin:20px;">
+            <div id="main" style="position:relative;overflow:hidden;width:550px;height:550px;">
+                <img src="~/Content/Images/Toppings/dough.png" style="position:absolute;top:0px;left:0px;z-index:0;" />
+                <img src="~/Content/Images/Toppings/sauce.png" style="position:absolute;top:0px;left:0px;z-index:0;" />
+                <img src="~/Content/Images/Toppings/cheese.png" style="position:absolute;top:0px;left:0px;z-index:0;" />
+
+                <img id="pepperoni" src="~/Content/Images/Toppings/pepperoni.png" style="position:absolute;top:0px;left:0px;z-index:1;visibility:hidden;" />
+                <img id="sausage" src="~/Content/Images/Toppings/sausage.png" style="position:absolute;top:0px;left:0px;z-index:1;visibility:hidden;" />
+                <img id="ham" src="~/Content/Images/Toppings/ham.png" style="position:absolute;top:0px;left:0px;z-index:1;visibility:hidden;" />
+                <img id="bacon" src="~/Content/Images/Toppings/bacon.png" style="position:absolute;top:0px;left:0px;z-index:1;visibility:hidden;" />
+                <img id="chicken" src="~/Content/Images/Toppings/chicken.png" style="position:absolute;top:0px;left:0px;z-index:1;visibility:hidden;" />
+
+                <img id="greenpeppers" src="~/Content/Images/Toppings/green-peppers.png" style="position:absolute;top:0px;left:0px;z-index:2;visibility:hidden;" />
+                <img id="bannanapeppers" src="~/Content/Images/Toppings/bannana-peppers.png" style="position:absolute;top:0px;left:0px;z-index:2;visibility:hidden;" />
+                <img id="spinach" src="~/Content/Images/Toppings/spinnach.png" style="position:absolute;top:0px;left:0px;z-index:2;visibility:hidden;" />
+                <img id="blackolives" src="~/Content/Images/Toppings/black-olives.png" style="position:absolute;top:0px;left:0px;z-index:2;visibility:hidden;" />
+                <img id="pineapple" src="~/Content/Images/Toppings/pineapple.png" style="position:absolute;top:0px;left:0px;z-index:2;visibility:hidden;" />
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5">
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>Meat</h3>
+            </div>
+            <div class="panel-body">
+                <button class="btn btn-primary" onclick="setImageVisible('pepperoni', true);">Add Pepperoni</button>
+                <button class="btn btn-danger" onclick="setImageVisible('pepperoni', false);">Remove Pepperoni</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="setImageVisible('sausage', true);">Add Sausage</button>
+                <button class="btn btn-danger" onclick="setImageVisible('sausage', false);">Remove Sausage</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="setImageVisible('ham', true);">Add Ham</button>
+                <button class="btn btn-danger" onclick="setImageVisible('ham', false);">Remove Ham</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="setImageVisible('bacon', true);">Add Bacon</button>
+                <button class="btn btn-danger" onclick="setImageVisible('bacon', false);">Remove Bacon</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="setImageVisible('chicken', true);">Add Chicken</button>
+                <button class="btn btn-danger" onclick="setImageVisible('chicken', false);">Remove Chicken</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h3>Vegetables</h3></div>
+            <div class="panel-body">
+                <button class="btn btn-primary" onclick="setImageVisible('greenpeppers', true);">Add Green Peppers</button>
+                <button class="btn btn-danger" onclick="setImageVisible('greenpeppers', false);">Remove Green Peppers</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="setImageVisible('bannanapeppers', true);">Add Bannana Peppers</button>
+                <button class="btn btn-danger" onclick="setImageVisible('bannanapeppers', false);">Remove Bannana Peppers</button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="setImageVisible('spinach', true);">Add Spinach</button>
+                <button class="btn btn-danger" onclick="setImageVisible('spinach', false);">Remove Spinach </button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="setImageVisible('blackolives', true);">Add Black Olives</button>
+                <button class="btn btn-danger" onclick="setImageVisible('blackolives', false);">Remove Black Olives </button>
+                <br />
+                <br />
+                <button class="btn btn-primary" onclick="setImageVisible('pineapple', true);">Add Pineapples</button>
+                <button class="btn btn-danger" onclick="setImageVisible('pineapple', false);">Remove Pineapples</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts {
+    <script>
+        function setImageVisible(id, visible) {
+            var img = document.getElementById(id);
+            img.style.visibility = (visible ? 'visible' : 'hidden');
+        }
+    </script>
+}

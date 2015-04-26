@@ -13,6 +13,11 @@ namespace PizzaProjectAlt.Controllers
             return View();
         }
 
+        public ActionResult PizzaBuilder()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

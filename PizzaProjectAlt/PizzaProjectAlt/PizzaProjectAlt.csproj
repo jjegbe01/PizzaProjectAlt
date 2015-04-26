@@ -189,6 +189,19 @@
     <Content Include="Content\Images\rsz_2deepdishpizza.jpg" />
     <Content Include="Content\Images\rsz_deepdishpizza.jpg" />
     <Content Include="Content\Images\space.jpg" />
+    <Content Include="Content\Images\Toppings\bacon.png" />
+    <Content Include="Content\Images\Toppings\bannana-peppers.png" />
+    <Content Include="Content\Images\Toppings\black-olives.png" />
+    <Content Include="Content\Images\Toppings\cheese.png" />
+    <Content Include="Content\Images\Toppings\chicken.png" />
+    <Content Include="Content\Images\Toppings\dough.png" />
+    <Content Include="Content\Images\Toppings\green-peppers.png" />
+    <Content Include="Content\Images\Toppings\ham.png" />
+    <Content Include="Content\Images\Toppings\pepperoni.png" />
+    <Content Include="Content\Images\Toppings\pineapple.png" />
+    <Content Include="Content\Images\Toppings\sauce.png" />
+    <Content Include="Content\Images\Toppings\sausage.png" />
+    <Content Include="Content\Images\Toppings\spinnach.png" />
     <Content Include="Content\twitterbot.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -253,6 +266,7 @@
     <Content Include="Views\Pizzas\Index.cshtml" />
     <Content Include="Views\Account\GetUsers.cshtml" />
     <Content Include="Views\Home\_Carousel.cshtml" />
+    <Content Include="Views\Home\PizzaBuilder.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
