@@ -5,132 +5,208 @@
 }
 
 <h2>Details</h2>
+<div class="row">
+    <div>
+        <h4>Pizza</h4>
+        <hr />
+        <div class="col-md-5" style="float:right">
 
-<div>
-    <h4>Pizza</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.userID)
-        </dt>
+            <div style="margin:20px;">
+                <div id="main" style="position:relative;overflow:hidden;width:550px;height:550px;">
+                    <img src="~/Content/Images/Toppings/dough.png" style="position:absolute;top:0px;left:0px;z-index:0; height:550px; width:550px;">
+                    <img src="~/Content/Images/Toppings/sauce.png" style="position:absolute;top:0px;left:0px;z-index:0;">
+                    <img src="~/Content/Images/Toppings/cheese.png" style="position:absolute;top:0px;left:0px;z-index:0;">
 
-        <dd>
-            @Html.DisplayFor(model => model.userID)
-        </dd>
+                    <img id="pepperoniImage" src="~/Content/Images/Toppings/pepperoni.png" style="position:absolute;top:0px;left:0px;z-index:1;visibility:hidden;">
+                    <img id="sausageImage" src="~/Content/Images/Toppings/sausage.png" style="position:absolute;top:0px;left:0px;z-index:1;visibility:hidden;">
+                    <img id="hamImage" src="~/Content/Images/Toppings/ham.png" style="position:absolute;top:0px;left:0px;z-index:1;visibility:hidden;">
+                    <img id="baconImage" src="~/Content/Images/Toppings/bacon.png" style="position:absolute;top:0px;left:0px;z-index:1;visibility:hidden;">
+                    <img id="chickenImage" src="~/Content/Images/Toppings/chicken.png" style="position:absolute;top:0px;left:0px;z-index:1;visibility:hidden;">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.pizzaName)
-        </dt>
+                    <img id="greenpeppersImage" src="~/Content/Images/Toppings/green-peppers.png" style="position:absolute;top:0px;left:0px;z-index:2;visibility:hidden;">
+                    <img id="bannanapeppersImage" src="~/Content/Images/Toppings/bannana-peppers.png" style="position:absolute;top:0px;left:0px;z-index:2;visibility:hidden;">
+                    <img id="spinachImage" src="~/Content/Images/Toppings/spinnach.png" style="position:absolute;top:0px;left:0px;z-index:2;visibility:hidden;">
+                    <img id="blackolivesImage" src="~/Content/Images/Toppings/black-olives.png" style="position:absolute;top:0px;left:0px;z-index:2;visibility:hidden;">
+                    <img id="pineappleImage" src="~/Content/Images/Toppings/pineapple.png" style="position:absolute;top:0px;left:0px;z-index:2;visibility:hidden;">
 
-        <dd>
-            @Html.DisplayFor(model => model.pizzaName)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.bacon)
-        </dt>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5" style="float:left">
 
-        <dd>
-            @Html.DisplayFor(model => model.bacon)
-        </dd>
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.userID)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.bpeppers)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.userID)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.bpeppers)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.pizzaName)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.blackOlives)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.pizzaName)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.blackOlives)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.bacon)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.cheese)
-        </dt>
+                <dd>
+                    @Html.CheckBoxFor(model => model.bacon, new { ID = "baconBox", disabled = "disabled" })
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.cheese)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.bpeppers)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.chicken)
-        </dt>
+                <dd>
+                    @Html.CheckBoxFor(model => model.bpeppers, new { ID = "bpeppersBox", disabled = "disabled" })
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.chicken)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.blackOlives)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.dough)
-        </dt>
+                <dd>
+                    @Html.CheckBoxFor(model => model.blackOlives, new { ID = "blackOliveBox", disabled = "disabled" })
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.dough)
-        </dd>
+                @*<dt>
+                    @Html.DisplayNameFor(model => model.cheese)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.gpeppers)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.cheese)
+                </dd>*@
 
-        <dd>
-            @Html.DisplayFor(model => model.gpeppers)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.chicken)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ham)
-        </dt>
+                <dd>
+                    @Html.CheckBoxFor(model => model.chicken, new { ID = "chickenBox", disabled = "disabled" })
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.ham)
-        </dd>
+                @*<dt>
+                    @Html.DisplayNameFor(model => model.dough)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.pepperoni)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.dough)
+                </dd>*@
 
-        <dd>
-            @Html.DisplayFor(model => model.pepperoni)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.gpeppers)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.pineapple)
-        </dt>
+                <dd>
+                    @Html.CheckBoxFor(model => model.gpeppers, new { ID = "gpeppersBox", disabled = "disabled" })
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.pineapple)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.ham)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.sauce)
-        </dt>
+                <dd>
+                    @Html.CheckBoxFor(model => model.ham, new { ID = "hamBox", disabled = "disabled" })
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.sauce)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.pepperoni)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.sausage)
-        </dt>
+                <dd>
+                    @Html.CheckBoxFor(model => model.pepperoni, new { ID = "pepperoniBox", disabled = "disabled" })
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.sausage)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.pineapple)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.spinnach)
-        </dt>
+                <dd>
+                    @Html.CheckBoxFor(model => model.pineapple, new { ID = "pineappleBox", disabled = "disabled" })
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.spinnach)
-        </dd>
+                @*<dt>
+                    @Html.DisplayNameFor(model => model.sauce)
+                </dt>
 
-    </dl>
+                <dd>
+                    @Html.CheckBoxFor(model => model.sauce)
+                </dd>*@
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.sausage)
+                </dt>
+
+                <dd>
+                    @Html.CheckBoxFor(model => model.sausage, new { ID = "sausageBox", disabled = "disabled" })
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.spinnach)
+                </dt>
+
+                <dd>
+                    @Html.CheckBoxFor(model => model.spinnach, new { ID = "spinnachBox", disabled="disabled" })
+                </dd>
+
+            </dl>
+            <button onclick="generatePizza()">Generate Preview</button>
+
+            <script>
+                var spinachStatus = document.getElementById('spinnachBox');
+                var sausageBox = document.getElementById('sausageBox');
+                var baconBox = document.getElementById('baconBox');
+                var bpeppersBox = document.getElementById('bpeppersBox');
+                var blackOlivesBox = document.getElementById('blackOliveBox');
+                var chickenBox = document.getElementById('chickenBox');
+                var gpeppersBox = document.getElementById('gpeppersBox');
+                var hamBox = document.getElementById('hamBox');
+                var pepperoniBox = document.getElementById('pepperoniBox');
+                var pineappleBox = document.getElementById('pineappleBox')
+
+                var generatePizza = function () {
+                    if(spinachStatus.checked==true)
+                    {
+                        spinachImage.style.visibility = "visible";
+                    }
+                    if (sausageBox.checked == true) {
+                        sausageImage.style.visibility = "visible";
+                    }
+                    if (baconBox.checked == true) {
+                        baconImage.style.visibility = "visible";
+                    }
+                    if (bpeppersBox.checked == true) {
+                        bannanapeppersImage.style.visibility = "visible";
+                    }
+                    if (blackOlivesBox.checked == true) {
+                        blackolivesImage.style.visibility = "visible";
+                    }
+                    if (chickenBox.checked == true) {
+                        chickenImage.style.visibility = "visible";
+                    }
+                    if (gpeppersBox.checked == true) {
+                        greenpeppersImage.style.visibility = "visible";
+                    }
+                    if (hamBox.checked == true) {
+                        hamImage.style.visibility = "visible";
+                    }
+                    if (pepperoniBox.checked == true) {
+                        pepperoniImage.style.visibility = "visible";
+                    }
+                    if (pineappleBox.checked == true) {
+                        pineappleImage.style.visibility = "visible";
+                    }
+                }
+            </script>
+        </div>
+        </div>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.pizzaID }) |
