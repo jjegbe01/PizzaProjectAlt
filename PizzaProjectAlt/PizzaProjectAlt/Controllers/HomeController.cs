@@ -13,7 +13,7 @@ namespace PizzaProjectAlt.Controllers
             return View();
         }
 
-        public ActionResult PizzaBuilder()
+        public ActionResult Menu()
         {
             return View();
         }

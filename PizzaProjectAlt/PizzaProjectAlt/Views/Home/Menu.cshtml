@@ -1,14 +1,80 @@
-﻿@{
-    ViewBag.Title = "PizzaBuilder";
+﻿
+@{
+    ViewBag.Title = "Menu";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>PizzaBuilder</h2>
+<div class="row">&nbsp;</div>
 
+<h2>Menu</h2>
+
+<div class="row"><div class="col-md-12"><hr /></div></div>
+
+<div class="row">
+    <div class="col-md-4 text-center">
+        <img class="img-circle center-block hidden-xs" src="~/Content/Images/Specialty/rsz_pepperoni.jpg">
+        <h3 class="picture-text"><strong>Deep Dish Pepperoni</strong></h3>
+        <p class="img-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a class="btn btn-primary" href="@Url.Action("Login", "Account")">
+            Order Now
+        </a>
+    </div>
+    <div class="col-md-4 text-center">
+        <img class="img-circle center-block hidden-xs" src="~/Content/Images/Specialty/rsz_philly_cheese_pizza.jpg">
+        <h3 class="picture-text"><strong>Philly Cheese Steak</strong></h3>
+        <p class="img-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a class="btn btn-primary" href="@Url.Action("Login", "Account")">
+            Order Now
+        </a>
+    </div>
+    <div class="col-md-4 text-center">
+        <img class="img-circle center-block hidden-xs" src="~/Content/Images/Specialty/rsz_sausage.jpg">
+        <h3 class="picture-text"><strong>Sausage</strong></h3>
+        <p class="img-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a class="btn btn-primary" href="@Url.Action("Login", "Account")">
+            Order Now
+        </a>
+    </div>
+</div>
+
+<div class="row">&nbsp;</div>
 <div class="row">&nbsp;</div>
 
 <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-4 text-center">
+        <img class="img-circle center-block hidden-xs" src="~/Content/Images/Specialty/rsz_ham_pineapple.jpg">
+        <h3 class="picture-text"><strong>Ham & Pineapple</strong></h3>
+        <p class="img-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a class="btn btn-primary" href="@Url.Action("Login", "Account")">
+            Order Now
+        </a>
+    </div>
+    <div class="col-md-4 text-center">
+        <img class="img-circle center-block hidden-xs" src="~/Content/Images/Specialty/rsz_veggie_pizza.jpg">
+        <h3 class="picture-text"><strong>Veggie</strong></h3>
+        <p class="img-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a class="btn btn-primary" href="@Url.Action("Login", "Account")">
+            Order Now
+        </a>
+    </div>
+    <div class="col-md-4 text-center">
+        <img class="img-circle center-block hidden-xs" src="~/Content/Images/Specialty/rsz_chicken_bacon.jpg">
+        <h3 class="picture-text"><strong>Chicken Bacon Ranch</strong></h3>
+        <p class="img-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a class="btn btn-primary" href="@Url.Action("Login", "Account")">
+            Order Now
+        </a>
+    </div>
+</div>
+
+
+<div class="row"><div class="col-md-12"><hr /></div></div>
+
+<h2>Build Your Own</h2>
+
+<div class="row">&nbsp;</div>
+<div class="row">
+    <div class="col-md-5" style="float:right">
         <div style="margin:20px;">
             <div id="main" style="position:relative;overflow:hidden;width:550px;height:550px;">
                 <img src="~/Content/Images/Toppings/dough.png" style="position:absolute;top:0px;left:0px;z-index:0;" />
@@ -26,20 +92,14 @@
                 <img id="spinach" src="~/Content/Images/Toppings/spinnach.png" style="position:absolute;top:0px;left:0px;z-index:2;visibility:hidden;" />
                 <img id="blackolives" src="~/Content/Images/Toppings/black-olives.png" style="position:absolute;top:0px;left:0px;z-index:2;visibility:hidden;" />
                 <img id="pineapple" src="~/Content/Images/Toppings/pineapple.png" style="position:absolute;top:0px;left:0px;z-index:2;visibility:hidden;" />
-
             </div>
         </div>
     </div>
-    <div class="col-md-5">
 
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-6">
+    <div class="col-md-5" style="float:left">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3>Meat</h3>
+                <h3>Ingredients</h3>
             </div>
             <div class="panel-body">
                 <button class="btn btn-primary" onclick="setImageVisible('pepperoni', true);">Add Pepperoni</button>
@@ -60,13 +120,8 @@
                 <br />
                 <button class="btn btn-primary" onclick="setImageVisible('chicken', true);">Add Chicken</button>
                 <button class="btn btn-danger" onclick="setImageVisible('chicken', false);">Remove Chicken</button>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="panel panel-default">
-            <div class="panel-heading"><h3>Vegetables</h3></div>
-            <div class="panel-body">
+                <br />
+                <br />
                 <button class="btn btn-primary" onclick="setImageVisible('greenpeppers', true);">Add Green Peppers</button>
                 <button class="btn btn-danger" onclick="setImageVisible('greenpeppers', false);">Remove Green Peppers</button>
                 <br />
@@ -89,13 +144,20 @@
         </div>
     </div>
 </div>
+<div class="row">
+    <div class="col-md-11 text-right">
+        <a class="btn btn-primary btn-lg" href="@Url.Action("Login", "Account")">
+            Order Now
+        </a>
+    </div>
+</div>
 
 
-@section scripts {
-    <script>
-        function setImageVisible(id, visible) {
-            var img = document.getElementById(id);
-            img.style.visibility = (visible ? 'visible' : 'hidden');
-        }
-    </script>
-}
+    @section scripts {
+        <script>
+            function setImageVisible(id, visible) {
+                var img = document.getElementById(id);
+                img.style.visibility = (visible ? 'visible' : 'hidden');
+            }
+        </script>
+    }

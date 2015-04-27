@@ -55,9 +55,7 @@ color: white; /*Change active text color here*/
 }
 
 
-
-
-
-#specialty {
-    padding-top: 40px;
+.carousel-caption {
+    top: 0;
+    bottom: auto;
 }

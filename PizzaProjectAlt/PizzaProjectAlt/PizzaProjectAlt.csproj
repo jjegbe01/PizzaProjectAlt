@@ -189,6 +189,12 @@
     <Content Include="Content\Images\rsz_2deepdishpizza.jpg" />
     <Content Include="Content\Images\rsz_deepdishpizza.jpg" />
     <Content Include="Content\Images\space.jpg" />
+    <Content Include="Content\Images\Specialty\rsz_chicken_bacon.jpg" />
+    <Content Include="Content\Images\Specialty\rsz_ham_pineapple.jpg" />
+    <Content Include="Content\Images\Specialty\rsz_pepperoni.jpg" />
+    <Content Include="Content\Images\Specialty\rsz_philly_cheese_pizza.jpg" />
+    <Content Include="Content\Images\Specialty\rsz_sausage.jpg" />
+    <Content Include="Content\Images\Specialty\rsz_veggie_pizza.jpg" />
     <Content Include="Content\Images\Toppings\bacon.png" />
     <Content Include="Content\Images\Toppings\bannana-peppers.png" />
     <Content Include="Content\Images\Toppings\black-olives.png" />
@@ -263,12 +269,12 @@
     <Content Include="Views\Account\Edit.cshtml" />
     <Content Include="Views\Account\GetUsers.cshtml" />
     <Content Include="Views\Home\_Carousel.cshtml" />
-    <Content Include="Views\Home\PizzaBuilder.cshtml" />
     <Content Include="Views\Pizzas\Create.cshtml" />
     <Content Include="Views\Pizzas\Delete.cshtml" />
     <Content Include="Views\Pizzas\Details.cshtml" />
     <Content Include="Views\Pizzas\Edit.cshtml" />
     <Content Include="Views\Pizzas\Index.cshtml" />
+    <Content Include="Views\Home\Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
