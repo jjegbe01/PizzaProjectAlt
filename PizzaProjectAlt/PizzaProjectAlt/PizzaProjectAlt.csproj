@@ -244,6 +244,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <None Include="Properties\PublishProfiles\PieSpace.pubxml" />
+    <None Include="Properties\PublishProfiles\PieSpaceTest.pubxml" />
     <None Include="Properties\PublishProfiles\PizzaProject.pubxml" />
     <None Include="Properties\PublishProfiles\PizzaProjectAlt.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
