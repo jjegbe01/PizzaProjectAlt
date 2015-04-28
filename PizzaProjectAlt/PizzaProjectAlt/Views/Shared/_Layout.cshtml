@@ -34,8 +34,9 @@
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>-->
                     @if (Request.IsAuthenticated)
                     {
-                        <li>@Html.ActionLink("View Profile","ViewProfile","Account")</li>
-                        <li>@Html.ActionLink("Pizzas","Index","Pizzas")</li>
+                        <li>@Html.ActionLink("Our Community", "GetUsers", "Account")</li>
+                        <li>@Html.ActionLink("View Profile", "ViewProfile", "Account")</li>
+                        <li>@Html.ActionLink("Pizzas", "Index", "Pizzas")</li>
                     }
                 </ul>
                 @Html.Partial("_LoginPartial")
