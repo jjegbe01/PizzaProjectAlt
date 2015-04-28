@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.Entity;
+using System.ComponentModel.DataAnnotations;
 
 namespace PizzaProjectAlt.Models
 {
     public class Pizza
     {
         public int pizzaID { get; set; }
+        [Display(Name = "Creator")]
         public string userID { get; set; }
+        [Display(Name = "Pizza Title")]
         public string pizzaName { get; set; }
         public bool bacon { get; set; }
         public bool bpeppers { get; set; }

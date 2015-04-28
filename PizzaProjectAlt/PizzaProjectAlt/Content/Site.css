@@ -1,12 +1,15 @@
 ﻿body {
+    background: url("https://www.pizzahut.com/assets/w/images/black/background.jpg") no-repeat scroll 50% 0 #252523;
     padding-top: 50px;
     padding-bottom: 20px;
+    
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    color: white;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
