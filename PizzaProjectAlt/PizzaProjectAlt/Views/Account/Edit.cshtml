@@ -3,20 +3,34 @@
     ViewBag.Title = "Edit";
     <!--Layout = "~/Views/Shared/_Layout.cshtml";-->
 }
-
+<style>
+   input{
+       color:black !important;
+   }
+</style>
 <h2>Edit</h2>
 @if(Request.IsAuthenticated)
 { 
     using (Html.BeginForm())
     {
 
+            @Html.LabelFor(model => model.FirstName)<br />
+            @Html.EditorFor(model => model.FirstName)<br />
     
-            @Html.EditorFor(model => model.FirstName)
-            @Html.EditorFor(model => model.LastName)
-            @Html.EditorFor(model => model.ProfilePicture)
-            @Html.EditorFor(model => model.Location)
-            @Html.EditorFor(model => model.FavoritePizzaria)
-            @Html.EditorFor(model => model.PizzaEatingStyle)
+            @Html.LabelFor(model => model.LastName)<br />
+            @Html.EditorFor(model => model.LastName)<br />
+    
+            @Html.LabelFor(model => model.ProfilePicture)<br />
+            @Html.EditorFor(model => model.ProfilePicture)<br />
+    
+            @Html.LabelFor(model => model.Location)<br />
+            @Html.EditorFor(model => model.Location)<br />
+    
+            @Html.LabelFor(model => model.FavoritePizzaria)<br />
+            @Html.EditorFor(model => model.FavoritePizzaria)<br />
+    
+            @Html.LabelFor(model => model.PizzaEatingStyle)<br />
+            @Html.EditorFor(model => model.PizzaEatingStyle)<br /><br />
             <input type="submit" class="btn btn-default" value="Save" />
 
     }
