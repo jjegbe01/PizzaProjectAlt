@@ -7,14 +7,26 @@
 <h2>Your Profile</h2>
 @if (Request.IsAuthenticated)
 {
-    <img src="@ViewBag.ProfilePicture" alt="@ViewBag.FirstName" style="height:100px;" /> <br />
-    @ViewBag.FirstName <br />
-    @ViewBag.LastName <br />
-    @ViewBag.Location <br />
-    @ViewBag.FavoritePizzaria <br />
-    @ViewBag.PizzaEatingStyle <br />
+    <center><img src="@ViewBag.ProfilePicture" alt="@ViewBag.FirstName" style="height:100px;" /></center>
+    <div class="row">
+        
+            <div style="float:left; margin-left:40%">
+                <span class="label label-danger">Name</span><p>@ViewBag.FirstName @ViewBag.LastName</p>
+                <span class="label label-danger">Location</span><p>@ViewBag.Location</p>
+            </div>
 
-    <a href="/Account/Edit" class="Button">Edit Your Profile</a>
+            <div style="float:right; margin-right:40%">
+                <span class="label label-danger">Favorite Pizza Place</span><p>@ViewBag.FavoritePizzaria</p>
+                <span class="label label-danger">Pizza Eating Style</span><p>@ViewBag.PizzaEatingStyle</p>
+            </div>
+    </div>
+    
+    
+    @*@ViewBag.Location <br />
+    @ViewBag.FavoritePizzaria <br />
+    @ViewBag.PizzaEatingStyle <br />*@
+
+    <center><a href="/Account/Edit" class="Button">Edit Your Profile</a></center>
 }
 else if (!Request.IsAuthenticated)
 {
