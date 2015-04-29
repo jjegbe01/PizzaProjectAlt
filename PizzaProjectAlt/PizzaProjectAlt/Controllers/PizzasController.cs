@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using PizzaProjectAlt.Models;
+using PizzaProjectAlt.Controllers;
 
 namespace PizzaProjectAlt.Controllers
 {
@@ -48,6 +49,9 @@ namespace PizzaProjectAlt.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "pizzaID,userID,pizzaName,bacon,bpeppers,blackOlives,cheese,chicken,dough,gpeppers,ham,pepperoni,pineapple,sauce,sausage,spinnach")] Pizza pizza)
         {
+
+            pizza.userID = User.Identity.Name;
+            
             if (ModelState.IsValid)
             {
                 db.Pizzas.Add(pizza);
