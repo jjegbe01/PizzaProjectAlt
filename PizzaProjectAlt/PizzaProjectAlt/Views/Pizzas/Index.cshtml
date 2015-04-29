@@ -4,115 +4,160 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<div class="row">&nbsp;</div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            
-            @Html.DisplayNameFor(model => model.userID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.pizzaName)
-        </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.bacon)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.bpeppers)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.blackOlives)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.cheese)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.chicken)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.dough)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.gpeppers)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ham)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.pepperoni)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.pineapple)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.sauce)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.sausage)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.spinnach)
-        </th>*@
-        <th></th>
-    </tr>
+<h3>My Pizza</h3>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.userID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.pizzaName)
-        </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.bacon)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.bpeppers)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.blackOlives)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.cheese)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.chicken)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.dough)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.gpeppers)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ham)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.pepperoni)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.pineapple)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.sauce)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.sausage)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.spinnach)
-        </td>*@
-        <td>
-            @*@Html.ActionLink("Edit", "Edit", new { id=item.pizzaID }) |*@
-            @Html.ActionLink("Details", "Details", new { id=item.pizzaID }) |
-            @*@Html.ActionLink("Delete", "Delete", new { id=item.pizzaID })*@
-        </td>
-    </tr>
+<div class="row">&nbsp;</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <a class="btn btn-primary btn large pull-right" href="@Url.Action("Create")">
+            Create Pizza
+        </a>
+    </div>
+</div>
+
+<div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <a class="twitter-timeline" href="https://twitter.com/Pie_Space" data-widget-id="593215823780683776">Tweets by Pie_Space</a>
+            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+        </div>
+        <!-- /#sidebar-wrapper -->
+    </div>
+
+
+
+<div class="row">&nbsp;</div>
+
+    <table class="table">
+        <tr>
+            <th>
+
+                @Html.DisplayNameFor(model => model.userID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pizzaName)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.bacon)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.bpeppers)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.blackOlives)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.cheese)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.chicken)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.dough)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.gpeppers)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ham)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.pepperoni)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.pineapple)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.sauce)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.sausage)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.spinnach)
+                </th>*@
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.userID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.pizzaName)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.bacon)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.bpeppers)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.blackOlives)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.cheese)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.chicken)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.dough)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.gpeppers)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ham)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.pepperoni)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.pineapple)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.sauce)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.sausage)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.spinnach)
+                    </td>*@
+                <td>
+
+                    <a class="btn btn-primary" href="@Url.Action("Details", new { id = item.pizzaID })">
+                        <span class="glyphicon glyphicon-comment"></span>
+                        Details                        
+                    </a>
+                    @*@Html.ActionLink("Edit", "Edit", new { id=item.pizzaID }) |*@
+                    @*@Html.ActionLink("Details", "Details", new { id = item.pizzaID })*@
+                    @*@Html.ActionLink("Delete", "Delete", new { id=item.pizzaID })*@
+                </td>
+            </tr>
+        }
+
+    </table>
+
+
+@section scripts {
+    <script>
+        var $rows = $('#table tr');
+        $('#search').keyup(function () {
+            var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+
+            $rows.show().filter(function () {
+                var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+                return !~text.indexOf(val);
+            }).hide();
+        });
+
+    </script>
 }
 
-</table>
