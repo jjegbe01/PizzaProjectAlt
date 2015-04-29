@@ -4,12 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Pie Space</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-
-    @RenderSection("pagecss", false)
-
-</head>
+          @Styles.Render("~/Content/css")
+          @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.6/css/jquery.dataTables.min.css" />
+          @RenderSection("pagecss", false)></head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top" id="pizza-navbar">
         <div class="container">
@@ -54,5 +52,7 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
-</body>
+
+    <script type="text/javascript" src="//cdn.datatables.net/1.10.6/js/jquery.dataTables.min.js"></script>
+            </body>
 </html>

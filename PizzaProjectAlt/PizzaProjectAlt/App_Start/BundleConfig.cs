@@ -33,6 +33,10 @@ namespace PizzaProjectAlt
                 .Include("~/Content/home.css")
                 );
 
+            bundles.Add(new StyleBundle("~/bundles/pizzacss").Include(
+                "~/Content/pizza.css")
+                );
+
         }
     }
 }

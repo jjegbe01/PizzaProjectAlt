@@ -230,6 +230,7 @@
     <Content Include="Content\Images\Toppings\sauce.png" />
     <Content Include="Content\Images\Toppings\sausage.png" />
     <Content Include="Content\Images\Toppings\spinnach.png" />
+    <Content Include="Content\pizza.css" />
     <Content Include="Content\twitterbot.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

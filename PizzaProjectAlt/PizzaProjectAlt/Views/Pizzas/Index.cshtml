@@ -4,6 +4,11 @@
     ViewBag.Title = "Index";
 }
 
+@section pagecss {
+    @Styles.Render("~/bundles/pizzacss")
+}
+
+
 <div class="row">&nbsp;</div>
 
 <h3>My Pizza</h3>
@@ -22,8 +27,10 @@
 
 <div class="row">&nbsp;</div>
 
-    <table class="table">
+    <table class="table table-color table-bordered" id="search">
+        <thead class="table-head-color">
         <tr>
+           
             <th>
 
                 @Html.DisplayNameFor(model => model.userID)
@@ -72,9 +79,10 @@
                 </th>*@
             <th></th>
         </tr>
-
+            </thead>
         @foreach (var item in Model)
         {
+            <tbody>
             <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.userID)
@@ -132,23 +140,14 @@
                     @*@Html.ActionLink("Delete", "Delete", new { id=item.pizzaID })*@
                 </td>
             </tr>
+               </tbody>
         }
 
     </table>
+@section Scripts {
 
-
-@section scripts {
-    <script>
-        var $rows = $('#table tr');
-        $('#search').keyup(function () {
-            var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
-
-            $rows.show().filter(function () {
-                var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
-                return !~text.indexOf(val);
-            }).hide();
-        });
-
-    </script>
+    <script>$(document).ready(function () {
+    $('#search').DataTable();
+});</script>
 }
 
